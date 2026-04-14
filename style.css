@@ -4,27 +4,27 @@
     --accent-blue: #70A1FF;
     --midnight: #0B0E14;
     
-    /* 浅色模式 */
-    --primary-color: #4f46e5;
+    /* 浅色模式：极致明亮 “清晨天空” */
+    --primary-color: #3b82f6; /* 亮蓝色 */
     --bg-color: #ffffff;
-    --card-bg: rgba(255, 255, 255, 0.9);
-    --text-color: #0f172a;
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --text-color: #1e293b;
     --text-muted: #64748b;
-    --border-color: rgba(79, 70, 229, 0.08);
-    --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
-    --gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
-    --glass-bg: rgba(255, 255, 255, 0.7);
+    --border-color: rgba(59, 130, 246, 0.1);
+    --shadow: 0 20px 40px rgba(59, 130, 246, 0.05);
+    --gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    --glass-bg: rgba(255, 255, 255, 0.8);
 }
 
 [data-theme="dark"] {
-    /* 深色模式 */
-    --bg-color: #0f172a;
-    --card-bg: rgba(30, 41, 59, 0.7);
+    /* 深色模式：星空蓝 */
+    --bg-color: #020617;
+    --card-bg: rgba(15, 23, 42, 0.8);
     --text-color: #f8fafc;
     --text-muted: #94a3b8;
-    --border-color: rgba(255, 255, 255, 0.06);
-    --shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
-    --glass-bg: rgba(15, 23, 42, 0.5);
+    --border-color: rgba(255, 255, 255, 0.08);
+    --shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+    --glass-bg: rgba(2, 6, 23, 0.6);
 }
 
 * {
@@ -43,7 +43,7 @@ body {
     transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* 噪点背景纹理 */
+/* 噪点背景纹理：极低透明度，仅保留质感 */
 body::before {
     content: "";
     position: fixed;
@@ -52,7 +52,7 @@ body::before {
     width: 100%;
     height: 100%;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-    opacity: 0.03; /* 进一步降低噪点透明度 */
+    opacity: 0.015; 
     pointer-events: none;
     z-index: 1000;
 }
@@ -63,8 +63,8 @@ body::before {
     position: relative;
     max-width: 500px;
     margin: 0 auto;
-    background: radial-gradient(circle at 10% 10%, hsla(245, 80%, 50%, 0.03) 0%, transparent 60%),
-                radial-gradient(circle at 90% 90%, hsla(270, 80%, 50%, 0.03) 0%, transparent 60%);
+    background: radial-gradient(circle at 0% 0%, hsla(217, 91%, 60%, 0.05) 0%, transparent 60%),
+                radial-gradient(circle at 100% 100%, hsla(262, 83%, 58%, 0.05) 0%, transparent 60%);
 }
 
 /* 主题切换 */
@@ -74,22 +74,22 @@ body::before {
     right: 24px;
     z-index: 100;
     background: var(--glass-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--border-color);
     width: 48px;
     height: 48px;
-    border-radius: 16px;
+    border-radius: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
-    transition: all 0.3s;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .theme-toggle:hover {
-    transform: translateY(-2px);
+    transform: translateY(-2px) rotate(8deg);
     border-color: var(--primary-color);
 }
 
@@ -109,11 +109,11 @@ body::before {
     display: flex;
 }
 
-/* 首页：明亮化重构 */
+/* 首页：极致明亮重构 */
 #home-page {
     justify-content: center;
     align-items: center;
-    padding-bottom: 15vh;
+    padding-bottom: 12vh;
 }
 
 .hero {
@@ -123,17 +123,16 @@ body::before {
 
 .hero h1 {
     font-family: 'Cinzel', serif;
-    font-size: 16vh; /* 稍微缩小一点防止压迫感 */
+    font-size: 16vh;
     font-weight: 900;
     letter-spacing: -1px;
     line-height: 0.8;
     margin-bottom: 1rem;
-    background: linear-gradient(to bottom, var(--text-color), transparent 95%);
+    background: var(--gradient); /* 改为充满亮感的渐变 */
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    opacity: 0.95;
-    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.05));
+    filter: drop-shadow(0 15px 30px rgba(59, 130, 246, 0.15));
 }
 
 .subtitle {
