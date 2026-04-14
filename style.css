@@ -1,30 +1,30 @@
 :root {
-    /* 核心调色：象牙与极光 (Ivory & Aurora) */
-    --accent-gold: #D4AF37;
-    --primary-color: #5a67d8;
+    /* 核心调色：高阶审美品味 (Sophisticated Aesthetics) */
+    --accent-vibrant: #4f46e5;
+    --accent-gold: #c5a059;
     
-    /* 浅色模式 */
-    --bg-color: #fdfbf7; /* 象牙白 */
+    /* 浅色模式：黎明之光 (Dawn Ivory) */
+    --bg-color: #fcfaf8; 
     --card-bg: rgba(255, 255, 255, 0.85);
-    --text-color: #1a202c;
-    --text-muted: #718096;
-    --border-color: rgba(90, 103, 216, 0.1);
-    --shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
-    --gradient: linear-gradient(135deg, #5a67d8 0%, #a855f7 100%);
+    --text-color: #111827;
+    --text-muted: #6b7280;
+    --border-color: rgba(0, 0, 0, 0.05);
+    --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+    --gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
     --glass-bg: rgba(255, 255, 255, 0.6);
 }
 
 [data-theme="dark"] {
-    /* 深色模式：极夜深邃 */
-    --bg-color: #0c0e14;
-    --card-bg: rgba(26, 32, 44, 0.8);
-    --text-color: #f7fafc;
-    --text-muted: #a0aec0;
+    /* 深色模式：极邃深海 (Deep Abyss) */
+    --bg-color: #030712;
+    --card-bg: rgba(17, 24, 39, 0.8);
+    --text-color: #f9fafb;
+    --text-muted: #9ca3af;
     --border-color: rgba(255, 255, 255, 0.1);
-    --shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
-    --glass-bg: rgba(26, 32, 44, 0.6);
-    --primary-color: #7f9cf5;
-    --gradient: linear-gradient(135deg, #7f9cf5 0%, #b794f4 100%);
+    --shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+    --glass-bg: rgba(17, 24, 39, 0.5);
+    --accent-vibrant: #6366f1;
+    --gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
 }
 
 * {
@@ -35,15 +35,15 @@
 }
 
 body {
-    font-family: 'Montserrat', -apple-system, sans-serif;
+    font-family: 'Montserrat', -apple-system, 'PingFang SC', sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
     overflow: hidden;
-    transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* 极细微噪点，增加纸张高级感 */
+/* 增加质感：极细噪点层 */
 body::before {
     content: "";
     position: fixed;
@@ -63,87 +63,36 @@ body::before {
     position: relative;
     max-width: 500px;
     margin: 0 auto;
+    background: radial-gradient(circle at 0% 0%, hsla(245, 80%, 50%, 0.04) 0%, transparent 50%),
+                radial-gradient(circle at 100% 100%, hsla(270, 80%, 50%, 0.04) 0%, transparent 50%);
 }
 
-/* 首页：神圣典雅重构 */
-#home-page {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-bottom: 15vh;
-}
-
-.hero h1 {
-    font-family: 'Cinzel', serif;
-    font-size: 15vh;
-    font-weight: 900;
-    letter-spacing: -2px;
-    line-height: 0.9;
-    margin-bottom: 1.5rem;
-    color: var(--text-color);
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 15px 30px rgba(0,0,0,0.05));
-}
-
-.subtitle {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 0.6rem;
-    color: var(--text-muted);
-    text-transform: uppercase;
-}
-
-.primary-btn {
-    margin-top: 6rem;
-    padding: 1.25rem 4rem;
-    font-size: 1.1rem;
-    font-family: 'Montserrat', sans-serif;
-    border: none;
-    border-radius: 100px;
-    background: var(--gradient);
-    color: white;
-    font-weight: 700;
-    cursor: pointer;
-    box-shadow: 0 20px 40px rgba(90, 103, 216, 0.3);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    letter-spacing: 2px;
-}
-
-.primary-btn:active {
-    transform: scale(0.96) translateY(2px);
-}
-
-/* 主题切换 */
+/* 主题切换：高级感的悬浮球 */
 .theme-toggle {
     position: fixed;
-    top: 24px;
-    right: 24px;
+    top: 32px;
+    right: 32px;
     z-index: 100;
     background: var(--glass-bg);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--border-color);
-    width: 48px;
-    height: 48px;
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     box-shadow: var(--shadow);
-    transition: all 0.4s;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .theme-toggle:hover {
-    transform: rotate(15deg);
-    border-color: var(--primary-color);
+    transform: scale(1.1) rotate(10deg);
+    border-color: var(--accent-vibrant);
 }
 
-/* 答题页：精致仪式感 */
 .page {
     position: absolute;
     top: 0;
@@ -152,7 +101,7 @@ body::before {
     height: 100%;
     display: none;
     flex-direction: column;
-    padding: 2.5rem 1.5rem;
+    padding: 3rem 2rem;
     overflow: hidden;
 }
 
@@ -160,8 +109,65 @@ body::before {
     display: flex;
 }
 
+/* 首页：英雄版位 (Hero Section) */
+#home-page {
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20vh;
+}
+
+.hero h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 16vh;
+    font-weight: 900;
+    letter-spacing: -2px;
+    line-height: 0.8;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    /* 层次感文字装饰 */
+    background: linear-gradient(to bottom, var(--text-color), transparent 150%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 15px 40px rgba(0,0,0,0.06));
+}
+
+.subtitle {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.7rem;
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    margin-top: -1rem;
+    margin-left: 0.7rem;
+    opacity: 0.8;
+}
+
+.primary-btn {
+    margin-top: 5rem;
+    padding: 1.3rem 4rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 100px;
+    background: var(--gradient);
+    color: #ffffff !important; /* 强制白色，修复隐形问题 */
+    cursor: pointer;
+    box-shadow: 0 15px 35px rgba(79, 70, 229, 0.3);
+    transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+    letter-spacing: 3px;
+    z-index: 10;
+}
+
+.primary-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 45px rgba(79, 70, 229, 0.45);
+}
+
+/* 答题页：仪式感流程 */
 .quiz-header {
-    margin-bottom: 3.5rem;
+    margin-bottom: 4rem;
 }
 
 .progress-container {
@@ -169,7 +175,7 @@ body::before {
     height: 4px;
     background: var(--border-color);
     border-radius: 10px;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
 }
 
 .progress-bar {
@@ -177,21 +183,25 @@ body::before {
     width: 0%;
     background: var(--gradient);
     border-radius: 10px;
-    transition: width 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 0 15px rgba(79, 70, 229, 0.4);
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #question-index {
     font-family: 'Cinzel', serif;
     font-size: 1.1rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--accent-vibrant);
+}
+
+.question-container {
+    flex: 1;
 }
 
 .question-container h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     font-weight: 700;
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
     line-height: 1.4;
     letter-spacing: -0.5px;
 }
@@ -203,32 +213,38 @@ body::before {
 }
 
 .option-btn {
-    padding: 1.4rem 1.6rem;
+    padding: 1.5rem 1.8rem;
     background: var(--card-bg);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
     border: 1px solid var(--border-color);
-    border-radius: 20px;
+    border-radius: 24px;
     color: var(--text-color);
     text-align: left;
     font-size: 1.05rem;
     font-weight: 500;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: all 0.3s;
 }
 
-.option-btn:active {
-    transform: scale(0.98);
-    background: var(--glass-bg);
-    border-color: var(--primary-color);
+.option-btn:hover {
+    background: white;
+    border-color: var(--accent-vibrant);
+    transform: translateX(10px);
+    box-shadow: var(--shadow);
 }
 
-/* 结果页：灵魂重塑 */
+[data-theme="dark"] .option-btn:hover {
+    background: #1e293b;
+}
+
+/* 结果页：灵魂终塑 (Soul Reveal) */
 .result-card {
     background: var(--card-bg);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
     border: 1px solid var(--border-color);
-    border-radius: 35px;
-    padding: 2rem 1.5rem;
+    border-radius: 40px;
+    padding: 2.5rem 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -236,44 +252,45 @@ body::before {
     box-shadow: var(--shadow);
     height: 100%;
     width: 100%;
-    max-height: calc(100vh - 4.5rem);
+    max-height: calc(100vh - 5rem);
     position: relative;
+    overflow: hidden;
 }
 
 .star-badge {
-    background: var(--primary-color);
-    color: white;
-    padding: 0.4rem 1.2rem;
+    background: var(--accent-gold);
+    color: #ffffff;
+    padding: 0.5rem 1.4rem;
     border-radius: 100px;
     font-family: 'Cinzel', serif;
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 2px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 5px 15px rgba(197, 160, 89, 0.3);
 }
 
 .star-nickname {
     font-family: 'Cinzel', serif;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     font-weight: 900;
     margin-bottom: 0.6rem;
     color: var(--text-color);
 }
 
 .result-prefix {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: 600;
     color: var(--text-muted);
     text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 0.2rem;
+    letter-spacing: 4px;
+    margin-bottom: 0.3rem;
 }
 
 .result-name {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.2rem;
-    font-weight: 800;
-    margin-bottom: 1.2rem;
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
     background: var(--gradient);
     -webkit-background-clip: text;
     background-clip: text;
@@ -283,8 +300,8 @@ body::before {
 .result-image-container {
     flex: 1;
     width: 100%;
-    margin-bottom: 1.2rem;
-    border-radius: 25px;
+    margin-bottom: 1.5rem;
+    border-radius: 30px;
     overflow: hidden;
     background: rgba(0,0,0,0.02);
     display: flex;
@@ -292,64 +309,58 @@ body::before {
     align-items: center;
 }
 
-.result-image-container img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-
 .star-desc-line {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--primary-color);
-    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--accent-vibrant);
+    margin-bottom: 1rem;
     font-style: italic;
 }
 
 .result-desc {
-    font-size: 0.95rem;
+    font-size: 1rem;
     line-height: 1.6;
     color: var(--text-muted);
-    margin-bottom: 1.8rem;
+    margin-bottom: 2rem;
     padding: 0 1rem;
 }
 
 .action-bar {
     display: flex;
-    gap: 1rem;
+    gap: 1.2rem;
     width: 100%;
 }
 
 .secondary-btn {
     flex: 1;
-    padding: 1.1rem;
-    border-radius: 20px;
-    font-size: 0.95rem;
+    padding: 1.2rem;
+    border-radius: 22px;
+    font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
     transition: all 0.3s;
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(--accent-vibrant);
     background: transparent;
-    color: var(--primary-color);
+    color: var(--accent-vibrant);
 }
 
 .secondary-btn#restart-btn {
     background: var(--gradient);
-    color: white;
+    color: #ffffff;
     border: none;
-    box-shadow: 0 10px 20px rgba(90, 103, 216, 0.2);
+    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.2);
 }
 
-/* 动效：精致揭示 */
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+/* 动效：灵魂揭幕 */
+@keyframes revealFromBottom {
+    from { opacity: 0; transform: translateY(40px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 .page.active > * {
-    animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    animation: revealFromBottom 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
 }
 
 .hero h1 { animation-delay: 0.1s; }
-.subtitle { animation-delay: 0.2s; }
-.primary-btn { animation-delay: 0.4s; }
+.subtitle { animation-delay: 0.25s; }
+.primary-btn { animation-delay: 0.5s; }
