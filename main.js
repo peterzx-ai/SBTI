@@ -56,7 +56,21 @@ dom.themeToggle.onclick = () => {
     updateThemeIcon(newTheme);
 };
 
+// 预加载所有结果页人格图片
+function preloadResults() {
+    const urls = Object.values(import('./data.js').then(m => {
+        Object.values(m.personalities).forEach(p => {
+            const img = new Image();
+            img.src = p.image;
+        });
+    }));
+}
+
 initTheme();
+// 页面加载完成后静默预加载，不阻塞主流程
+window.addEventListener('load', () => {
+    setTimeout(preloadResults, 1000);
+});
 
 function switchPage(pageId) {
 
@@ -104,7 +118,17 @@ function selectOption(opt) {
 function showResult() {
     const result = getPersonality(userAnswers);
     dom.resultName.innerText = result.name;
+    
+    // 图片加载处理
+    dom.resultImage.classList.remove('loaded');
     dom.resultImage.src = result.image;
+    dom.resultImage.onload = () => {
+        dom.resultImage.classList.add('loaded');
+        const container = dom.resultImage.parentElement;
+        container.style.animation = 'none';
+        container.style.background = 'transparent';
+    };
+
     dom.resultDesc.innerText = result.desc;
 
     // 渲染紫微主星信息

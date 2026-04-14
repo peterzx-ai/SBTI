@@ -118,13 +118,12 @@ body::before {
 
 .hero h1 {
     font-family: 'Cinzel', serif;
-    font-size: 16vh;
+    font-size: 14vh; /* 略微缩小以适应屏幕边界 */
     font-weight: 900;
     letter-spacing: -2px;
-    line-height: 0.8;
-    margin-bottom: 2rem;
+    line-height: 1.2; /* 增大行高，防止文字上下截断 */
+    margin-bottom: 1.5rem;
     color: var(--text-color);
-    /* 层次感文字装饰 */
     background: linear-gradient(to bottom, var(--text-color), transparent 150%);
     -webkit-background-clip: text;
     background-clip: text;
@@ -244,17 +243,19 @@ body::before {
     -webkit-backdrop-filter: blur(30px);
     border: 1px solid var(--border-color);
     border-radius: 40px;
-    padding: 2.5rem 1.5rem;
+    padding: 1.5rem 1.2rem; /* 减小内边距 */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     box-shadow: var(--shadow);
-    height: 100%;
+    height: auto;
+    min-height: 80vh;
     width: 100%;
-    max-height: calc(100vh - 5rem);
+    max-height: calc(100vh - 2rem); /* 增大最大高度限制 */
     position: relative;
-    overflow: hidden;
+    overflow-y: auto; /* 允许必要时滚动，防止溢出看不到 */
+    -webkit-overflow-scrolling: touch;
 }
 
 .star-badge {
@@ -288,9 +289,9 @@ body::before {
 }
 
 .result-name {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 900;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     background: var(--gradient);
     -webkit-background-clip: text;
     background-clip: text;
