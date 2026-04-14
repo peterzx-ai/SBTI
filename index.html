@@ -41,11 +41,16 @@
         <!-- 结果页 -->
         <section id="result-page" class="page">
             <div class="result-card">
+                <div class="star-badge" id="star-badge">
+                    <span id="star-name"></span> · <span id="star-code"></span>
+                </div>
+                <h3 id="star-nickname" class="star-nickname"></h3>
                 <p class="result-prefix">你的灵魂人格是：</p>
                 <h2 id="result-name" class="result-name"></h2>
                 <div class="result-image-container">
                     <img id="result-image" src="" alt="人格图片">
                 </div>
+                <p id="star-desc" class="star-desc-line"></p>
                 <p id="result-desc" class="result-desc"></p>
                 <div class="action-bar">
                     <button id="restart-btn" class="secondary-btn">再测一次</button>
@@ -53,6 +58,7 @@
                 </div>
             </div>
         </section>
+
     </div>
 
     <script type="module" src="main.js"></script>

@@ -4,98 +4,154 @@ export const personalities = {
         image: '微信图片_20260414140408_775_155.png',
         desc: '学习使我快乐，证书使我安心，终身学习卷王，知识储备库本人。',
         cluster: 'A',
-        tag: '学习'
+        tag: '学习',
+        star: '天府',
+        code: 'TFSC',
+        nickname: '闷声守财奴',
+        starDesc: '低调攒钱，管家型人格，稳得一批'
     },
     '热血特种兵': {
         name: '热血特种兵',
         image: '微信图片_20260414140408_776_155.png',
         desc: '压力越大越猛，越难越要上，战斗力爆表，人生就是战斗。',
         cluster: 'A',
-        tag: '事业'
+        tag: '事业',
+        star: '七杀',
+        code: 'QSCT',
+        nickname: '易燃易爆',
+        starDesc: '一点就炸，谁也不服，孤勇战神'
     },
     '爹味说教家': {
         name: '爹味说教家',
         image: '微信图片_20260414140409_777_155.png',
         desc: '爱讲道理、爱操心，有点唠叨但真心为你好，自带长辈气场。',
         cluster: 'C',
-        tag: '爱讲道理'
+        tag: '爱讲道理',
+        star: '天梁',
+        code: 'TLSJ',
+        nickname: '说教老大爷',
+        starDesc: '爱操心爱说教，老灵魂，正直固执'
     },
     '叛逆拆家王': {
         name: '叛逆拆家王',
         image: '微信图片_20260414140410_778_155.png',
         desc: '不爱被管，不爱规则，喜欢打破重建，不走寻常路。',
         cluster: 'B',
-        tag: '反骨'
+        tag: '反骨',
+        star: '破军',
+        code: 'PJZT',
+        nickname: '瞎折腾王',
+        starDesc: '一生推翻重来，越折腾越旺'
     },
     '精致强迫症': {
         name: '精致强迫症',
         image: '微信图片_20260414140411_779_155.png',
         desc: '颜值至上，细节控，生活必须精致整齐，不完美会难受。',
         cluster: 'A',
-        tag: '整洁'
+        tag: '整洁',
+        star: '廉贞',
+        code: 'LZCW',
+        nickname: '傲娇刺猬精',
+        starDesc: '嘴毒心软，口是心非，敏感极端'
     },
     '快乐显眼包': {
         name: '快乐显眼包',
         image: '微信图片_20260414140412_780_155.png',
         desc: '天生搞笑人，走到哪笑到哪，烦恼根本追不上。',
         cluster: 'B',
-        tag: '社交'
+        tag: '社交',
+        star: '贪狼',
+        code: 'TLWL',
+        nickname: '花心玩乐咖',
+        starDesc: '社交天花板，爱新鲜，三分钟热度'
     },
     '逻辑杠精': {
         name: '逻辑杠精',
         image: '微信图片_20260414140413_781_155.png',
         desc: '道理永远站我这边，说话一针见血，真实到扎心。',
         cluster: 'A',
-        tag: '讲理'
+        tag: '讲理',
+        star: '巨门',
+        code: 'JMDG',
+        nickname: '毒舌杠精王',
+        starDesc: '嘴比脑子快，爱讲道理，心软嘴硬'
     },
     '恋爱脑冠军': {
         name: '恋爱脑冠军',
         image: '微信图片_20260414140414_782_155.png',
         desc: '一恋爱就全世界只有对方，深情心软，为爱冲锋。',
         cluster: 'B',
-        tag: '感情'
+        tag: '感情',
+        star: '天相',
+        code: 'TXDS',
+        nickname: '端水大师傅',
+        starDesc: '谁也不得罪，体面人，讨好型人格'
     },
     '享福第一名': {
         name: '享福第一名',
         image: '微信图片_20260414140415_783_155.png',
         desc: '天生好命，吃好喝好没烦恼，人生主打舒服自在。',
         cluster: 'D',
-        tag: '纯佛系'
+        tag: '纯佛系',
+        star: '天同',
+        code: 'TTTP',
+        nickname: '佛系躺平怪',
+        starDesc: '能不动就不动，没野心，快乐凑数'
     },
     '紫府摆烂王': {
         name: '紫府摆烂王',
         image: '微信图片_20260414140416_784_155.png',
         desc: '帝王命格，能力顶级，但人生目标只有一个：摆烂。命好不用卷，佛系又尊贵。',
         cluster: 'D',
-        tag: '气场强'
+        tag: '气场强',
+        star: '紫微',
+        code: 'ZWDS',
+        nickname: '死撑帝王',
+        starDesc: '天生老大，死要面子，硬扛到底'
     },
     '财星打工奴': {
         name: '财星打工奴',
         image: '微信图片_20260414140417_785_155.png',
         desc: '搞钱刻进 DNA，不打工浑身难受，越忙越踏实，典型事业卷王。',
         cluster: 'A',
-        tag: '事业'
+        tag: '事业',
+        star: '武曲',
+        code: 'WQCM',
+        nickname: '铁面财迷',
+        starDesc: '只认搞钱，务实不浪漫，闷头苦干'
     },
     'emo 治愈师': {
         name: 'emo 治愈师',
         image: '微信图片_20260414140418_786_155.png',
         desc: '敏感细腻，容易 emo，但自愈力超强，是朋友最靠谱的情绪树洞。',
         cluster: 'C',
-        tag: '温柔敏感'
+        tag: '温柔敏感',
+        star: '太阴',
+        code: 'TYEM',
+        nickname: '深夜 emo 家',
+        starDesc: '温柔玻璃心，深夜流泪，情绪内耗'
     },
     '机灵摸鱼精': {
         name: '机灵摸鱼精',
         image: '微信图片_20260414140421_787_155.png',
         desc: '脑子超灵，但能不动就不动，摸鱼界天花板，用最小力气过最爽人生。',
         cluster: 'C',
-        tag: '聪明但懒'
+        tag: '聪明但懒',
+        star: '天机',
+        code: 'TJNH',
+        nickname: '内耗纠结怪',
+        starDesc: '想太多做太少，清醒摆烂，选择困难'
     },
     '暖场显眼包': {
         name: '暖场显眼包',
         image: '微信图片_20260414140422_788_155.png',
         desc: '社交小太阳，哪里冷场哪里有我，气氛组永久组长。',
         cluster: 'B',
-        tag: '社交'
+        tag: '社交',
+        star: '太阳',
+        code: 'TYNL',
+        nickname: '烂好暖炉人',
+        starDesc: '热心过度，透支自己，老好人本'
     }
 };
 
