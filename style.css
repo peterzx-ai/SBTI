@@ -232,21 +232,22 @@ body {
 
 .result-image-container {
     width: 100%;
-    max-width: 280px;
-    aspect-ratio: 1/1.5;
-    overflow: hidden;
-    border-radius: 20px;
+    max-width: 320px;
     margin-bottom: 1.5rem;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-    background: #fff;
-    border: 6px solid #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    background: transparent; /* 改为透明 */
 }
 
 .result-image-container img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    max-height: 70vh; /* 防止手机屏幕太短显示不全 */
+    display: block;
+    object-fit: contain; /* 确保完整显示，不裁剪 */
 }
+
 
 .result-desc {
     font-size: 1.05rem;
