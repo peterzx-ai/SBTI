@@ -58,12 +58,12 @@ dom.themeToggle.onclick = () => {
 
 // 预加载所有结果页人格图片
 function preloadResults() {
-    const urls = Object.values(import('./data.js').then(m => {
+    import('./data.js').then(m => {
         Object.values(m.personalities).forEach(p => {
             const img = new Image();
             img.src = p.image;
         });
-    }));
+    });
 }
 
 initTheme();
