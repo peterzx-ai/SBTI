@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SBTI 个人格测试</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- 主题切换 -->
+        <div id="theme-toggle" class="theme-toggle" title="切换主题">
+            <svg class="sun" style="display:none" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/></svg>
+            <svg class="moon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </div>
+
+        <!-- 首页 -->
+        <section id="home-page" class="page active">
+            <div class="hero">
+                <h1 class="glow-text">SBTI</h1>
+                <p class="subtitle">灵魂人格标签</p>
+                <div class="decoration"></div>
+            </div>
+            <button id="start-btn" class="primary-btn">开启探索之旅</button>
+        </section>
+
+        <!-- 答题页 -->
+        <section id="quiz-page" class="page">
+            <div class="quiz-header">
+                <div class="progress-container">
+                    <div id="progress-bar" class="progress-bar"></div>
+                </div>
+                <span id="question-index">1 / 20</span>
+            </div>
+            <div class="question-container">
+                <h2 id="question-text">正在加载题目...</h2>
+                <div id="options-container" class="options-container"></div>
+            </div>
+        </section>
+
+        <!-- 结果页 -->
+        <section id="result-page" class="page">
+            <div class="result-card">
+                <p class="result-prefix">你的灵魂人格是：</p>
+                <h2 id="result-name" class="result-name"></h2>
+                <div class="result-image-container">
+                    <img id="result-image" src="" alt="人格图片">
+                </div>
+                <p id="result-desc" class="result-desc"></p>
+                <div class="action-bar">
+                    <button id="restart-btn" class="secondary-btn">再测一次</button>
+                    <button id="share-btn" class="secondary-btn">分享结果</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
