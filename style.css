@@ -212,28 +212,47 @@ body {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 24px;
-    padding: 1.5rem 1rem;
+    padding: 1.2rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     box-shadow: var(--shadow);
     height: 100%;
-    max-height: calc(100vh - 4rem);
+    max-height: calc(100vh - 3rem);
     width: 100%;
 }
 
+.star-badge {
+    background: var(--gradient);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 4px 10px rgba(98, 0, 238, 0.2);
+}
+
+.star-nickname {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 0.4rem;
+    color: var(--text-color);
+}
+
 .result-prefix {
-    font-size: 0.95rem;
+    font-size: 0.75rem;
     font-weight: 500;
     color: var(--text-muted);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.1rem;
 }
 
 .result-name {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 800;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.6rem;
     background: var(--gradient);
     -webkit-background-clip: text;
     background-clip: text;
@@ -258,11 +277,18 @@ body {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
+.star-desc-line {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.4rem;
+    font-style: italic;
+}
 
 .result-desc {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     line-height: 1.4;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
     color: var(--text-muted);
     padding: 0 0.5rem;
     flex-shrink: 0;

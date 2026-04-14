@@ -21,6 +21,10 @@ const dom = {
     resultName: document.getElementById('result-name'),
     resultImage: document.getElementById('result-image'),
     resultDesc: document.getElementById('result-desc'),
+    starName: document.getElementById('star-name'),
+    starCode: document.getElementById('star-code'),
+    starNickname: document.getElementById('star-nickname'),
+    starDesc: document.getElementById('star-desc'),
     restartBtn: document.getElementById('restart-btn'),
     shareBtn: document.getElementById('share-btn')
 };
@@ -102,6 +106,13 @@ function showResult() {
     dom.resultName.innerText = result.name;
     dom.resultImage.src = result.image;
     dom.resultDesc.innerText = result.desc;
+
+    // 渲染紫微主星信息
+    dom.starName.innerText = result.star;
+    dom.starCode.innerText = result.code;
+    dom.starNickname.innerText = result.nickname;
+    dom.starDesc.innerText = `“${result.starDesc}”`;
+
     switchPage('result');
 }
 
